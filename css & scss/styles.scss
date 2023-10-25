@@ -1,0 +1,222 @@
+// variables
+$darkText: rgb(22, 22, 22);
+$radius10: 10px;
+// Base Codes
+@font-face {
+  font-family: QS;
+  src: url(/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: QS;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $darkText;
+}
+// Navbar
+.navbarWrapper {
+  height: 50px;
+  .row {
+    .leftNav {
+      ul {
+        li {
+          display: inline;
+          &:first-child {
+            background-color: transparent;
+            padding: 5px 35px 5px 13px;
+            border-radius: $radius10 + 10;
+            border: 1px solid black;
+            a {
+              color: $darkText;
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+          &:nth-child(2) {
+            background-color: rgb(0, 0, 0);
+            padding: 5px 18px;
+            border-radius: $radius10 + 10;
+            position: absolute;
+            left: 80px;
+            top: -6px;
+            a {
+              color: rgb(255, 255, 255);
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .rightNav {
+      ul {
+        li {
+          display: inline;
+          &:first-child {
+            background-color: rgb(255, 255, 255);
+            padding: 5px 28px 5px 10px;
+            border-radius: $radius10 + 10;
+            position: absolute;
+            right: 62px;
+            top: -6px;
+            border: 1px solid black;
+            z-index: -2;
+            a {
+              color: black;
+              font-size: 14px;
+              font-weight: 600;
+              span {
+                vertical-align: -7px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            background-color: black;
+            padding: 9px 18px;
+            border-radius: $radius10 + 10;
+            z-index: 2;
+            a {
+              color: white;
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    #mainMenu {
+      z-index: 999;
+      // transition: display .4s linear;
+    }
+  }
+}
+// modal style
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      left: 0px;
+      background-color: royalblue;
+    }
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-color: royalblue;
+    }
+    &::after {
+      width: 18px;
+      height: 18px;
+      animation: pulse 1s linear infinite;
+    }
+  }
+  .message {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+    text-align: center;
+    a {
+      color: royalblue;
+      &:hover {
+        text-decoration: underline royalblue;
+      }
+    }
+  }
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  label {
+    position: relative;
+    .input {
+      width: 100%;
+      padding: 10px 10px 20px 10px;
+      outline: 0;
+      border: 1px solid rgba(105, 105, 105, 0.397);
+      border-radius: 10px;
+    }
+  }
+}
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

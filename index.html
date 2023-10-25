@@ -18,9 +18,137 @@
     <link rel="stylesheet" href="css & scss/styles.css" />
   </head>
   <body>
-    
+    <nav class="container-fluid navbarWrapper fixed-top pt-3">
+        <div class="row">
+            <div class="col-6 leftNav">
+                <ul>
+                    <li><a data-target="#loginModal" data-toggle="modal" href="#">Log In</a></li>
+                    <li><a data-target="#signupModal" data-toggle="modal" href="#">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="col-6 rightNav d-flex justify-content-end">
+                <ul>
+                    <li><a href="#"><span class="material-symbols-outlined">more_vert</span></a></li>
+                    <li><a class="menuTrigger" href="#">MENU</a></li>
+                </ul>
+            </div>
+            <!-- Fix This Main Menu (links & Showing) -->
+            <div class="w-100 bg-danger px-3 mx-3 rounded d-none bg-light position-sticky mt-3" id="mainMenu">
+                <div class="row">
+                    <ul class="col-4">
+                    <li><a href="">ssad</a></li>
+                    <li><a href="">diewi</a></li>
+                    <li><a href="">qwdd</a></li>
+                    <li><a href="">dqwwd</a></li>
+                    <li><a href="">tjty</a></li>
+                    <li><a href="">edfvb</a></li>
+                    <li><a href="">wewerghy</a></li>
+                    <li><a href="">edfvb</a></li>
+                    <li><a href="">wewerghy</a></li>
+                </ul>
+                <ul class="col-4">
+                    <li><a href="">ued</a></li>
+                    <li><a href="">kkoious</a></li>
+                    <li><a href="">ijouiae</a></li>
+                    <li><a href="">iuiad</a></li>
+                    <li><a href="">koiuia</a></li>
+                    <li><a href="">oiuie</a></li>
+                    <li><a href="">kuyu</a></li>
+                    <li><a href="">koiuia</a></li>
+                    <li><a href="">oiuie</a></li>
+                    <li><a href="">kuyu</a></li>
+                </ul>
+                <ul class="col-4">
+                    <li><a href="">klau</a></li>
+                    <li><a href="">loji</a></li>
+                    <li><a href="">fdsf</a></li>
+                    <li><a href="">qwdqwdqfqfq</a></li>
+                    <li><a href="">oiuwq</a></li>
+                    <li><a href="">;poi</a></li>
+                    <li><a href="">oiiq</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <!-- modals -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form class="form">
+            <p class="title">Wellcome Back!</p>
+            <p class="message">loging in back to your account</p>
+            <div class="flex"></div>
 
+            <label>
+              <input required="" placeholder="" type="email" class="input" />
+              <span>Email</span>
+            </label>
+
+            <label>
+              <input required="" placeholder="" type="password" class="input" />
+              <span>Password</span>
+            </label>
+
+            <button class="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form class="form">
+            <p class="title">Register</p>
+            <p class="message">Signup now and get full access to our WebSite.</p>
+            <div class="flex">
+              <label>
+                <input required="" placeholder="" type="text" class="input" />
+                <span>Firstname</span>
+              </label>
+
+              <label>
+                <input required="" placeholder="" type="text" class="input" />
+                <span>Lastname</span>
+              </label>
+            </div>
+
+            <label>
+              <input required="" placeholder="" type="email" class="input" />
+              <span>Email</span>
+            </label>
+
+            <label>
+              <input required="" placeholder="" type="password" class="input" />
+              <span>Password</span>
+            </label>
+            <label>
+              <input required="" placeholder="" type="password" class="input" />
+              <span>Confirm password</span>
+            </label>
+            <button class="submit">Submit</button>
+            <p class="signin">
+              Already have an acount ? <a href="#">Signin</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- BootsTrap -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
