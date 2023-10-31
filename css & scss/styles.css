@@ -2,6 +2,10 @@
   font-family: QS;
   src: url(/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: CR;
+  src: url(/Front-end/Work/assets/fonts/Cravet/KRAVET_.TTF);
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,6 +22,22 @@ li {
 a {
   text-decoration: none;
   color: rgb(22, 22, 22);
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mt-110 {
+  margin-top: 110px;
+}
+
+.bgMainColor {
+  background-color: #F0252D;
+}
+
+.CRfont {
+  font-family: CR;
 }
 
 .navbarWrapper {
@@ -42,7 +62,7 @@ a {
   padding: 5px 18px;
   border-radius: 20px;
   position: absolute;
-  left: 80px;
+  left: 110px;
   top: -6px;
 }
 .navbarWrapper .row .leftNav ul li:nth-child(2) a {
@@ -205,7 +225,7 @@ a {
 }
 
 .submit:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: royalblue;
 }
 
 @-webkit-keyframes pulse {
@@ -228,4 +248,213 @@ a {
     transform: scale(1.8);
     opacity: 0;
   }
+}
+.headerWrapper .row .leftHeader .introduce {
+  font-size: 12px;
+  font-weight: 700;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader {
+  overflow: hidden;
+  font-size: 70px;
+  font-weight: 500;
+  color: rgb(40, 40, 40);
+  line-height: 80px;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs {
+  position: relative;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs span {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs .circle1 {
+  left: 24px;
+  background-color: #f63e44;
+  z-index: 2;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs .circle1::after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-right: 10px solid rgb(255, 255, 255);
+  border-top: 10px solid rgb(255, 255, 255);
+  top: 14px;
+  left: 8px;
+  transform: rotate(45deg);
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs .circle2 {
+  background-color: white;
+  left: 55px;
+  z-index: 3;
+  color: #F0252D;
+  padding: 7px 0 0 3px;
+  position: absolute;
+  line-height: 30px;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs .circle3 {
+  left: 85px;
+  z-index: 4;
+  bottom: 40px;
+}
+.headerWrapper .row .leftHeader .bigTextsInHeader:nth-child(2) .roundedHeaderIMGs .circle3 img {
+  border-radius: 50%;
+}
+.headerWrapper .row .leftHeader .headerBtn button {
+  border-radius: 24px;
+  background-color: #F0252D;
+  color: white;
+  margin-bottom: 30px;
+}
+.headerWrapper .row .leftHeader .headerBtn button:hover {
+  background-color: white;
+  color: #F0252D;
+  border: 1px solid #F0252D;
+}
+.headerWrapper .row .leftHeader .boxes div {
+  border-radius: 10px;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox {
+  background-color: rgb(238, 238, 238);
+  height: 80px;
+  cursor: pointer;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox:hover .leftBoxTexts span:first-child {
+  color: #F0252D;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic {
+  margin: 0 auto;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 4px 4px 12px 12px;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic img {
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -14px;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic img:nth-child(1) {
+  left: 35px;
+  z-index: 2;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic img:nth-child(2) {
+  left: 55px;
+  z-index: 2;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic img:nth-child(3) {
+  left: 75px;
+  z-index: 3;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .usersPic img:nth-child(4) {
+  left: 95px;
+  z-index: 4;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .leftBoxTexts span {
+  display: block;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .leftBoxTexts span:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.headerWrapper .row .leftHeader .boxes .leftBox .leftBoxTexts span:last-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox {
+  background-color: rgb(238, 238, 238);
+  height: 65px;
+  cursor: pointer;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .boxLogo {
+  background-color: #f63e44;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -18px;
+  left: 24px;
+  color: white;
+  font-size: 38px;
+  padding-left: 4px;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .boxText {
+  position: absolute;
+  left: 100px;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .boxText span {
+  display: block;
+  padding-top: 4px;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .rotatedArrow span {
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 4px;
+  transform: rotate(-45deg);
+  font-size: 18px;
+  padding: 4px;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .gameIcons a {
+  transition: color 0.1s;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .gameIcons a:hover {
+  color: #F0252D;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox .gameIcons a span {
+  position: absolute;
+  left: -22px;
+  font-size: 20px;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox a {
+  transition: color 0.3s;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox a:hover {
+  color: #F0252D;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox a:hover .chevronIcon {
+  transform: translateX(-4px);
+}
+.headerWrapper .row .leftHeader .boxes .rightBox a div {
+  bottom: -18px;
+  left: -18px;
+  width: 250px;
+  border-radius: 6px;
+  background-color: rgb(238, 238, 238);
+  font-size: 14px;
+  padding-top: 4px;
+  padding-left: 6px;
+  font-weight: 500;
+}
+.headerWrapper .row .leftHeader .boxes .rightBox a div .chevronIcon {
+  transition: transform 0.3s;
+}
+.headerWrapper .row .rightHeader a {
+  position: relative;
+}
+.headerWrapper .row .rightHeader a .mainHeaderPic {
+  border-radius: 10px;
+  padding: 0 3px;
+}
+.headerWrapper .row .rightHeader a .overlay {
+  left: 18px;
+  bottom: -200px;
+  color: white;
+  font-family: CR;
+  background-color: #F0252D;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.headerWrapper .row .rightHeader a .overlay button {
+  font-family: QS;
+  font-weight: 600;
+  border-radius: 14px 4px 14px 4px;
+}
+.headerWrapper .row .rightHeader a .overlay button:hover {
+  background-color: #F0252D;
+  color: white !important;
 }/*# sourceMappingURL=styles.css.map */
