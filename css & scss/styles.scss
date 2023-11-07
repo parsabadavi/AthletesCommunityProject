@@ -8,11 +8,25 @@ $mainColorLighter:#f63e44;
 // Base Codes
 @font-face {
   font-family: QS;
-  src: url(/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+  src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: CR;
-  src: url(/Front-end/Work/assets/fonts/Cravet/KRAVET_.TTF);
+  src: url(../fonts/Cravet/KRAVET_.TTF);
+}
+// Fixes
+// Comma for counter numbers
+// make that anim subtitle after counter
+// make rounded pics at the counter BG and make their animation
+// make the button in counter page come in screen whith animation after scrolled on it
+// fix the space between left header and counter
+// fix menu problem
+// fix responsibility (being responsive) problem
+// fix three dots BG in menu
+// fix modals color
+html{
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -244,6 +258,9 @@ a {
 }
 // header
 .headerWrapper{
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
   .row{
     .leftHeader{
       .introduce{
@@ -475,3 +492,91 @@ a {
     }
   }
 }
+// counter
+.counterWrapper{
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  div{
+    display: flex;
+    justify-content: center;
+  }
+  .joining{
+    font-size: $fontSize38 + 16px;
+    margin-top: -16px;
+  }
+  .becomePartOfIt{
+    background-color: black;
+    color: #fff;
+    border-radius: $radius10 + 14px;
+    padding: 8px 16px;
+    z-index: 4;
+    &:hover{
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+  #counter{
+    position: relative;
+    img{
+      width: 80px;
+      border-radius: 50%;
+    }
+    img:nth-child(2){
+      left: 200px;
+      top: 10px;
+      width: 40px;
+    }
+    img:nth-child(3){
+      left: 220px;
+      bottom: 25px;
+      width: 90px;
+    }
+    img:nth-child(4){
+      right: 540px;
+      width: 60px;
+    }
+    img:nth-child(5){
+      top: -30px;
+      right: 270px;
+      width: 50px;
+
+    }
+    img:nth-child(6){
+      right: 70px;
+      bottom: 20px;
+      width: 60px;
+    }
+  }
+  .countCustomStyles{
+    font-size: $fontSize38 + 200px;
+    color: $mainColor;
+    margin-top: -45px;
+    margin-bottom: -15px;
+    font-family: CR;
+  }
+  .counterSubtitleAnime{
+    div{
+      // animation: subtitle 10s infinite linear;
+      div{
+        font-size: $fontSize38 + 28px;
+        white-space: nowrap;
+        font-weight: 100;
+        img{
+          width: 70px;
+          height: 70px;
+          border-radius: $radius10 - 4px;
+          transform: rotate(10deg);
+          margin: 8px 20px;
+        }
+      }
+    }
+  }
+};
+// animations
+
+// @keyframes subtitle {
+//   from{transform: translate(0);}
+//   to{transform: translate(100px);}
+// }
