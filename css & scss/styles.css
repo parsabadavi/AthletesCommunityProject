@@ -234,27 +234,6 @@ a {
   background-color: royalblue;
 }
 
-@-webkit-keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
 .headerWrapper {
   height: 100vh;
   width: 100%;
@@ -544,4 +523,101 @@ a {
   border-radius: 6px;
   transform: rotate(10deg);
   margin: 8px 20px;
+}
+
+.flipCardsWrapper {
+  scroll-snap-align: start;
+  height: 90vh;
+  margin-top: 70px;
+  position: relative;
+}
+.flipCardsWrapper .row .pageNumber {
+  padding-left: 30px;
+  font-weight: 600;
+}
+.flipCardsWrapper .row .clientsTalk {
+  font-size: 38px;
+  font-weight: 500;
+}
+.flipCardsWrapper .row .arrows a span {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 4px;
+}
+.flipCardsWrapper .row .mainCard {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.flipCardsWrapper .row .mainCard:hover .customCard {
+  transform: translateY(90px) rotate(7deg);
+  background-color: #F0252D;
+  color: white;
+}
+.flipCardsWrapper .row .mainCard:hover .customCard .clientInfo span {
+  color: rgb(207, 207, 207);
+}
+.flipCardsWrapper .row .mainCard:hover .customCard .clientComment span span {
+  color: black;
+}
+.flipCardsWrapper .row .mainCard:hover .cardImg {
+  transform: rotate(-4deg);
+}
+.flipCardsWrapper .row .mainCard .cardImg {
+  border-radius: 30px;
+  height: 100%;
+  transition: transform 0.2s linear;
+}
+.flipCardsWrapper .row .mainCard:hover .clientComment {
+  color: white !important;
+}
+.flipCardsWrapper .row .mainCard .customCard {
+  background-color: #efefef;
+  height: 45vh;
+  border-radius: 30px;
+  top: 0;
+  left: 15px;
+  width: 100%;
+  z-index: 6;
+  transition: transform 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+}
+.flipCardsWrapper .row .mainCard .customCard .clientInfo {
+  padding: 10px 0 0 20px;
+  line-height: 20px;
+}
+.flipCardsWrapper .row .mainCard .customCard .clientInfo div {
+  font-size: 20px;
+  font-weight: 600;
+}
+.flipCardsWrapper .row .mainCard .customCard .clientInfo span {
+  font-size: 14px;
+  color: #727272;
+}
+.flipCardsWrapper .row .mainCard .customCard .clientComment {
+  padding: 10px 20px;
+  padding-top: 40px;
+}
+.flipCardsWrapper .row .mainCard .customCard .clientComment span {
+  color: #f63e44;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

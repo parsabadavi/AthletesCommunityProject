@@ -17,13 +17,14 @@ $mainColorLighter:#f63e44;
 // Fixes
 // Comma for counter numbers
 // make that anim subtitle after counter
-// make rounded pics at the counter BG and make their animation
-// make the button in counter page come in screen whith animation after scrolled on it
+// make one Card from flipCards Active aotomaticly
 // fix the space between left header and counter
 // fix menu problem
 // fix responsibility (being responsive) problem
 // fix three dots BG in menu
 // fix modals color
+// fix form styles arranged (make them sass)
+// take copyRight text in flipCards section to bottom center
 html{
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
@@ -245,17 +246,6 @@ a {
   background-color: royalblue;
 }
 
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
 // header
 .headerWrapper{
   height: 100vh;
@@ -574,8 +564,116 @@ a {
     }
   }
 };
-// animations
+//FlipCard
+.flipCardsWrapper{
+  scroll-snap-align: start;
+  height: 90vh;
+  margin-top: 70px;
+  position: relative;
+  .row{
+    .pageNumber{
+      padding-left: 30px;
+      font-weight: 600;
+    }
+    .clientsTalk{
+      font-size: $fontSize38;
+      font-weight: 500;
+    }
+    .arrows{
+      a{
+        span{
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 4px;
+      }
+      }
+    }
+  }
+  .row{
+      .mainCard{
+        padding: 0 20px;
+        cursor: pointer;
+        &:hover .customCard{
+          transform: translateY(90px) rotate(7deg);
+          background-color: $mainColor;
+          color: white;
+          .clientInfo{
+            span{
+              color: rgb(207, 207, 207);
+            }
+          }
+          .clientComment{
 
+            span{
+              span{
+                color: black;
+              }
+            }
+          }
+        }
+        &:hover .cardImg{
+          transform:rotate(-4deg);
+        }
+        .cardImg{
+          border-radius: $radius10 + 20px;
+          height: 100%;
+          transition: transform .2s linear;
+        }
+        &:hover .clientComment{
+          color: white!important;
+        }
+        .customCard{
+        background-color: #efefef;
+        height: 45vh;
+        border-radius: $radius10 + 20px;
+        top: 0;
+        left: 15px;
+        width: 100%;
+        z-index: 6;
+        transition: transform .2s linear, background-color .2s linear, color .2s linear;
+        .clientInfo{
+          padding: 10px 0 0 20px;
+          line-height: 20px;
+          div{
+            font-size: $fontSize14 + 6px;
+            font-weight: 600;
+          }
+          span{
+            font-size: $fontSize14;
+            color: #727272;
+          }
+        }
+        .clientComment{
+          padding: 10px 20px;
+          padding-top: 40px;
+          span{
+            
+            color: $mainColorLighter;
+          }
+        }
+      }
+      }
+  }
+  }
+
+
+
+
+
+
+
+// animations
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
 // @keyframes subtitle {
 //   from{transform: translate(0);}
 //   to{transform: translate(100px);}
