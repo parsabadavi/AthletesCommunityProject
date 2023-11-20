@@ -22,8 +22,6 @@ $mainColorLighter:#f63e44;
 // fix menu problem
 // fix responsibility (being responsive) problem
 // fix three dots BG in menu
-// fix modals color
-// fix form styles arranged (make them sass)
 // take copyRight text in flipCards section to bottom center
 html{
   scroll-snap-type: y mandatory;
@@ -55,6 +53,64 @@ a {
 }
 .CRfont{
   font-family: CR;
+}
+.SectionDivider10{
+  height: 10vh;
+}
+.SectionDivider15{
+  height: 15vh;
+}
+.GalleryOverlay{
+  z-index: 99;
+  background-color: $mainColorLighter;
+  width: 102.8%;
+  height: 100vh;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+}
+.GalleryOverlayActive{
+  z-index: 99;
+  background-color: rgb(0, 0, 0,.7);
+  width: 101.6%;
+  height: 100vh;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+.GalleryOverlayActiveText{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: $fontSize38 + 8px;
+  border-radius: $radius10 + 25px;
+  text-align: center;
+  padding: 4px 12px;
+  z-index: 100;
+}
+.GalleryOverlayText{
+  color: rgb(0, 0, 0);
+  position: absolute!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(90deg);
+  font-size: $fontSize38 + 8px;
+  white-space: nowrap;
+  border-radius: $radius10 + 28px;
+  text-align: center;
+  padding: 4px 12px;
+  z-index: 100;
+  height: 20vh!important;
+}
+#GalleryOverlayID1 ,
+#GalleryOverlayID2 ,
+#GalleryOverlayID3 ,
+#GalleryOverlayTextID1 ,
+#GalleryOverlayTextID2 ,
+#GalleryOverlayTextID3 {
+  transition: all .4s;
 }
 // mixins
 
@@ -146,7 +202,7 @@ a {
   position: relative;
   .title {
     font-size: 28px;
-    color: royalblue;
+    color: $mainColor;
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
@@ -161,12 +217,12 @@ a {
       width: 16px;
       border-radius: 50%;
       left: 0px;
-      background-color: royalblue;
+      background-color: $mainColor;
     }
     &::before {
       width: 18px;
       height: 18px;
-      background-color: royalblue;
+      background-color: $mainColor;
     }
     &::after {
       width: 18px;
@@ -203,9 +259,7 @@ a {
       border: 1px solid rgba(105, 105, 105, 0.397);
       border-radius: 10px;
     }
-  }
-}
-.form label .input + span {
+    .input + span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -213,39 +267,42 @@ a {
   font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
-}
-
-.form label .input:placeholder-shown + span {
+    }
+    .input:placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
-
-.form label .input:focus + span,
-.form label .input:valid + span {
+.input:valid + span,
+.input:focus + span{
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
-
-.form label .input:valid + span {
+.input:valid + span {
   color: green;
 }
-
-.submit {
+  }
+  .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+  background-color: $mainColor;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  transform: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover{
+    background-color: $mainColorLighter;
+  }
+  }
+  .signin{
+    a{
+      color: $mainColor;
+      text-decoration: none!important;
+    }
+  }
 }
-
-.submit:hover {
-  background-color: royalblue;
-}
-
 // header
 .headerWrapper{
   height: 100vh;
@@ -567,7 +624,7 @@ a {
 //FlipCard
 .flipCardsWrapper{
   scroll-snap-align: start;
-  height: 90vh;
+  height: 100vh;
   margin-top: 70px;
   position: relative;
   .row{
@@ -655,11 +712,115 @@ a {
       }
   }
   }
-
-
-
-
-
+//main
+.mainWrapper{
+  scroll-snap-align: start;
+  height: 100vh;
+  .row{
+    .leftSide{
+    p{
+      font-size: $fontSize38 + 20px;
+      font-weight: 400;
+    }
+  }
+  .rightSide{
+    display: flex;
+    align-items: center;
+    .row{
+      p{
+      font-size: $fontSize14;
+      font-weight: 500;
+    }
+      .customBTN{
+        border-radius: $radius10 + 20px;
+        background-color: black;
+        color: white;
+        transition: color .3s,background-color .3s;
+        position: relative;
+        padding-right: 18px;
+        &:hover{
+          background-color: white;
+          color: black;
+          border: 1px solid black;
+        }
+        &::after{
+          content: '';
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          color: black;
+          border-radius: 50%;
+          position: absolute;
+          right: -8px;
+          top: 8px;
+          border: 1px solid black;
+          padding: 0 0 4px 0;
+        }
+      }
+    }
+  }
+  }
+  .fullWidthPics{
+    height: 100vh;
+    scroll-snap-align: start;
+    .GalleryDiv1{
+      width: 50%;
+      transition: all .4s;
+    }
+    .GalleryDiv2{
+      width: 25%;
+      transition: all .4s;
+    }
+    .GalleryDiv3{
+      width: 25%;
+      transition: all .4s;
+    }
+    div{
+      position: relative;
+      height: 100vh;
+      padding: 0 5px;
+      cursor: pointer;
+      
+      img{
+        width: 100%;
+        height: 100vh;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        
+      }
+      // .textOnOverlay{
+      //   z-index: 99;
+      //   background-color: rgb(245, 21, 21,.7);
+      //   width: 90%;
+      //   height: 20%;
+      //   transform: rotate(90deg);
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%,-50%);
+      //   border-radius: $radius10 + 20px;
+      //   font-size: $fontSize38 + 6px;
+      //   color: white;
+      // }
+      // .overlayCus{
+      //     width: 100%;
+      //     height: 100vh;
+      //     background-color: $mainColorLighter;
+      //     border-radius: 50%;
+      //     position: absolute;
+      //     right: 0;
+      //     left: 0;
+      //     top: 0;
+      //     bottom: 0;
+      //     cursor: pointer;
+      // }
+    }
+  }
+}
 
 
 // animations

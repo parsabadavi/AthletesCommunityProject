@@ -38,6 +38,66 @@ $(document).ready(function () {
       a = 1;
     }
   });
-  //activeFlipCard
-  $(".activeFlipCard")
+  // GalleryDivs Sizing
+  $(".GalleryDiv2 , .GalleryDiv3").mouseenter(function () {
+    $(this).css("width", "50%");
+    $(".GalleryDiv1").css("width", "25%");
+  });
+  $(".GalleryDiv2 , .GalleryDiv3").mouseleave(function () {
+    $(this).css("width", "25%");
+    $(".GalleryDiv1").css("width", "50%");
+  });
+  //GalleryDivs LayOut
+  $(".GalleryDiv2").mouseenter(function(){
+        $("#GalleryOverlayID2").addClass("GalleryOverlayActive");
+        $("#GalleryOverlayTextID2").addClass("GalleryOverlayActiveText");
+        $("#GalleryOverlayTextID2").css({
+          transform : "translate(-50%,-50%) rotate(0deg)",
+          color : "white"
+        }); 
+        $("#GalleryOverlayID1").addClass("GalleryOverlay");
+        $("#GalleryOverlayID1").removeClass("GalleryOverlayActive");
+        $("#GalleryOverlayTextID1").addClass("GalleryOverlayText");
+        $("#GalleryOverlayTextID1").removeClass("GalleryOverlayActiveText");
+  });
+  $(".GalleryDiv2").mouseleave(function () {
+        $("#GalleryOverlayID2").removeClass("GalleryOverlayActive");
+        $("#GalleryOverlayTextID2").removeClass("GalleryOverlayActiveText");
+        $("#GalleryOverlayTextID2").css({
+          transform: "translate(-50%,-50%) rotate(90deg)",
+          color: "black"
+        }
+        );
+        $("#GalleryOverlayID1").removeClass("GalleryOverlay");
+        $("#GalleryOverlayID1").addClass("GalleryOverlayActive");
+        $("#GalleryOverlayTextID1").removeClass("GalleryOverlayText");
+        $("#GalleryOverlayTextID1").addClass("GalleryOverlayActiveText");
+  });
+  
+  $(".GalleryDiv3").mouseenter(function () {
+      $("#GalleryOverlayID3").addClass("GalleryOverlayActive");
+      $("#GalleryOverlayTextID3").addClass("GalleryOverlayActiveText");
+      $("#GalleryOverlayTextID3").css({
+        transform: "translate(-50%,-50%) rotate(0deg)",
+        color: "white",
+      });
+      $("#GalleryOverlayID1").addClass("GalleryOverlay");
+      $("#GalleryOverlayID1").removeClass("GalleryOverlayActive");
+      $("#GalleryOverlayTextID1").addClass("GalleryOverlayText");
+      $("#GalleryOverlayTextID1").removeClass("GalleryOverlayActiveText");
+  });
+  $(".GalleryDiv3").mouseleave(function () {
+      $("#GalleryOverlayID3").removeClass("GalleryOverlayActive");
+      $("#GalleryOverlayTextID3").removeClass("GalleryOverlayActiveText");
+      $("#GalleryOverlayTextID3").css({
+        transform: "translate(-50%,-50%) rotate(90deg)",
+        color: "black",
+      });
+      $("#GalleryOverlayID1").removeClass("GalleryOverlay");
+      $("#GalleryOverlayID1").addClass("GalleryOverlayActive");
+      $("#GalleryOverlayTextID1").removeClass("GalleryOverlayText");
+      $("#GalleryOverlayTextID1").addClass("GalleryOverlayActiveText");
+  });
+
+  
 });

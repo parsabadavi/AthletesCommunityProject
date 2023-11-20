@@ -46,6 +46,71 @@ a {
   font-family: CR;
 }
 
+.SectionDivider10 {
+  height: 10vh;
+}
+
+.SectionDivider15 {
+  height: 15vh;
+}
+
+.GalleryOverlay {
+  z-index: 99;
+  background-color: #f63e44;
+  width: 102.8%;
+  height: 100vh;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+}
+
+.GalleryOverlayActive {
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 101.6%;
+  height: 100vh;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.GalleryOverlayActiveText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  border-radius: 35px;
+  text-align: center;
+  padding: 4px 12px;
+  z-index: 100;
+}
+
+.GalleryOverlayText {
+  color: rgb(0, 0, 0);
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 46px;
+  white-space: nowrap;
+  border-radius: 38px;
+  text-align: center;
+  padding: 4px 12px;
+  z-index: 100;
+  height: 20vh !important;
+}
+
+#GalleryOverlayID1,
+#GalleryOverlayID2,
+#GalleryOverlayID3,
+#GalleryOverlayTextID1,
+#GalleryOverlayTextID2,
+#GalleryOverlayTextID3 {
+  transition: all 0.4s;
+}
+
 .navbarWrapper {
   height: 50px;
 }
@@ -123,7 +188,7 @@ a {
 }
 .form .title {
   font-size: 28px;
-  color: royalblue;
+  color: #F0252D;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -138,12 +203,12 @@ a {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: royalblue;
+  background-color: #F0252D;
 }
 .form .title::before {
   width: 18px;
   height: 18px;
-  background-color: royalblue;
+  background-color: #F0252D;
 }
 .form .title::after {
   width: 18px;
@@ -182,7 +247,6 @@ a {
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
 }
-
 .form label .input + span {
   position: absolute;
   left: 10px;
@@ -192,46 +256,44 @@ a {
   cursor: text;
   transition: 0.3s ease;
 }
-
 .form label .input:-moz-placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
-
 .form label .input:-ms-input-placeholder + span {
   top: 15px;
   font-size: 0.9em;
 }
-
 .form label .input:placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
-
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:valid + span,
+.form label .input:focus + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
-
 .form label .input:valid + span {
   color: green;
 }
-
-.submit {
+.form .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+  background-color: #F0252D;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  transform: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
-
-.submit:hover {
-  background-color: royalblue;
+.form .submit:hover {
+  background-color: #f63e44;
+}
+.form .signin a {
+  color: #F0252D;
+  text-decoration: none !important;
 }
 
 .headerWrapper {
@@ -527,7 +589,7 @@ a {
 
 .flipCardsWrapper {
   scroll-snap-align: start;
-  height: 90vh;
+  height: 100vh;
   margin-top: 70px;
   position: relative;
 }
@@ -598,6 +660,81 @@ a {
 }
 .flipCardsWrapper .row .mainCard .customCard .clientComment span {
   color: #f63e44;
+}
+
+.mainWrapper {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.mainWrapper .row .leftSide p {
+  font-size: 58px;
+  font-weight: 400;
+}
+.mainWrapper .row .rightSide {
+  display: flex;
+  align-items: center;
+}
+.mainWrapper .row .rightSide .row p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.mainWrapper .row .rightSide .row .customBTN {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  transition: color 0.3s, background-color 0.3s;
+  position: relative;
+  padding-right: 18px;
+}
+.mainWrapper .row .rightSide .row .customBTN:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.mainWrapper .row .rightSide .row .customBTN::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: -8px;
+  top: 8px;
+  border: 1px solid black;
+  padding: 0 0 4px 0;
+}
+.mainWrapper .fullWidthPics {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.mainWrapper .fullWidthPics .GalleryDiv1 {
+  width: 50%;
+  transition: all 0.4s;
+}
+.mainWrapper .fullWidthPics .GalleryDiv2 {
+  width: 25%;
+  transition: all 0.4s;
+}
+.mainWrapper .fullWidthPics .GalleryDiv3 {
+  width: 25%;
+  transition: all 0.4s;
+}
+.mainWrapper .fullWidthPics div {
+  position: relative;
+  height: 100vh;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.mainWrapper .fullWidthPics div img {
+  width: 100%;
+  height: 100vh;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 @-webkit-keyframes pulse {
