@@ -815,7 +815,48 @@ a {
 .QAWrapper .container-fluid .row2 #accordion .card .card-body {
   color: rgb(44, 44, 44);
   padding: 16px 70px;
-  line-height: 28px;
+  line-height: 26px;
+}
+
+.footerWrapper {
+  scroll-snap-align: start;
+  height: 44vh;
+  position: relative;
+}
+.footerWrapper .container-fluid {
+  background-color: #F0252D;
+  height: 44vh;
+  bottom: 0;
+  border-radius: 10px;
+}
+.footerWrapper .container-fluid .container .row span {
+  color: white;
+  display: block;
+  margin-top: 120px;
+}
+.footerWrapper .container-fluid .container .row span span {
+  border-bottom: 1px solid white;
+  display: inline;
+  cursor: pointer;
+  font-size: 14px;
+}
+.footerWrapper .container-fluid .container .row div {
+  height: 44vh;
+  border-radius: 14px;
+}
+.footerWrapper .container-fluid .container .row div a {
+  font-size: 10px;
+  color: white;
+}
+.footerWrapper .container-fluid .container .row div ul li {
+  color: white;
+}
+.footerWrapper .container-fluid .container .row div ul li:first-child {
+  font-size: 18px;
+  padding-bottom: 12px;
+}
+.footerWrapper .container-fluid .container .row div ul li a {
+  color: white;
 }
 
 @-webkit-keyframes pulse {

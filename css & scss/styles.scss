@@ -902,9 +902,56 @@ a {
           .card-body{
               color: rgb(44, 44, 44);
               padding: 16px 70px;
-              line-height: 28px;
+              line-height: 26px;
             }
         }
+      }
+    }
+  }
+}
+//Footer
+.footerWrapper{
+  scroll-snap-align: start;
+  height: 44vh;
+  position: relative;
+  .container-fluid{
+    background-color: $mainColor;
+    height: 44vh;
+    bottom: 0;
+    border-radius: $radius10;
+    .container{
+      .row{
+        span{
+          color: white;
+          display: block;
+          margin-top: 120px;
+          span{
+            border-bottom: 1px solid white;
+            display: inline;
+            cursor: pointer;
+            font-size: $fontSize14;
+          }
+        }
+        div{
+      height: 44vh;
+      border-radius: $radius10 + 4px;
+      a{
+        font-size: $fontSize14 - 4px;
+        color: white;
+      }
+      ul{
+        li{
+          color: white;
+          &:first-child{
+            font-size: $fontSize14 + 4px;
+            padding-bottom: 12px;
+          }
+          a{
+            color: white;
+          }
+        }
+      }
+    }
       }
     }
   }
