@@ -821,6 +821,94 @@ a {
     }
   }
 }
+//QAWrapper
+.QAWrapper{
+  scroll-snap-align: start;
+  height: 100vh;
+  .container-fluid{
+    height: 30vh;
+    .row{
+      margin-top: 10vh;
+      height: 24vh;
+      .sportIcons{
+        height: 30vh;
+        margin-top: 165px;
+        a{
+          &:hover{
+          color: black;
+        }
+          span{
+            border: 1px solid black!important;
+            border-radius: 50%;
+            padding: 4px;
+          }
+
+        }
+      }
+      .QAHeader{
+        margin-top: 40px;
+        button{
+          border-radius: $radius10 + 6px;
+          padding: 5px 10px;
+          font-size: $fontSize14 ;
+          background-color: $mainColor;
+          color: white;
+          margin-top: 18px;
+          border: none;
+          cursor: pointer;
+          transition: all .3s;
+          &:hover{
+            background-color: white;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+            font-weight: 500;
+          }
+        }
+      }
+      .socialIcons{
+          font-size: $fontSize14 + 10px;
+          margin-top: 165px;
+        a{
+          &:nth-child(1):hover{
+            color: orangered;
+            }
+            &:nth-child(2):hover{
+            color: red;
+            }
+            &:nth-child(3):hover{
+            color: rgb(40, 40, 40);
+            }
+        }
+      }
+    }
+    .row2{
+      #accordion{
+        width: 100%;
+        .card{
+            border: none;
+          .card-header{
+            border-bottom: none;
+          }
+          button{
+            color:Black;
+            font-size: $fontSize14 + 4px;
+            text-decoration: none;
+            transition: transform .3s;
+            font-weight: 700;
+            &:hover{
+              transform: translateX(6px);
+            }
+          }
+          .card-body{
+              color: rgb(44, 44, 44);
+              padding: 16px 70px;
+              line-height: 28px;
+            }
+        }
+      }
+    }
+  }
+}
 
 
 // animations

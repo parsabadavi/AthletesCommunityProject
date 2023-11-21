@@ -737,6 +737,87 @@ a {
   bottom: 0;
 }
 
+.QAWrapper {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.QAWrapper .container-fluid {
+  height: 30vh;
+}
+.QAWrapper .container-fluid .row {
+  margin-top: 10vh;
+  height: 24vh;
+}
+.QAWrapper .container-fluid .row .sportIcons {
+  height: 30vh;
+  margin-top: 165px;
+}
+.QAWrapper .container-fluid .row .sportIcons a:hover {
+  color: black;
+}
+.QAWrapper .container-fluid .row .sportIcons a span {
+  border: 1px solid black !important;
+  border-radius: 50%;
+  padding: 4px;
+}
+.QAWrapper .container-fluid .row .QAHeader {
+  margin-top: 40px;
+}
+.QAWrapper .container-fluid .row .QAHeader button {
+  border-radius: 16px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #F0252D;
+  color: white;
+  margin-top: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.QAWrapper .container-fluid .row .QAHeader button:hover {
+  background-color: white;
+  color: #F0252D;
+  border: 1px solid #F0252D;
+  font-weight: 500;
+}
+.QAWrapper .container-fluid .row .socialIcons {
+  font-size: 24px;
+  margin-top: 165px;
+}
+.QAWrapper .container-fluid .row .socialIcons a:nth-child(1):hover {
+  color: orangered;
+}
+.QAWrapper .container-fluid .row .socialIcons a:nth-child(2):hover {
+  color: red;
+}
+.QAWrapper .container-fluid .row .socialIcons a:nth-child(3):hover {
+  color: rgb(40, 40, 40);
+}
+.QAWrapper .container-fluid .row2 #accordion {
+  width: 100%;
+}
+.QAWrapper .container-fluid .row2 #accordion .card {
+  border: none;
+}
+.QAWrapper .container-fluid .row2 #accordion .card .card-header {
+  border-bottom: none;
+}
+.QAWrapper .container-fluid .row2 #accordion .card button {
+  color: Black;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s;
+  font-weight: 700;
+}
+.QAWrapper .container-fluid .row2 #accordion .card button:hover {
+  transform: translateX(6px);
+}
+.QAWrapper .container-fluid .row2 #accordion .card .card-body {
+  color: rgb(44, 44, 44);
+  padding: 16px 70px;
+  line-height: 28px;
+}
+
 @-webkit-keyframes pulse {
   from {
     transform: scale(0.9);
