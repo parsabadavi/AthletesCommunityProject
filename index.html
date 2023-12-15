@@ -43,8 +43,16 @@
       data-aos-duration="1200"
       data-aos-delay="300"
     >
-      <div class="row">
-        <div class="col-6 leftNav pl-5">
+      <div class="row position-relative">
+        <div class="col-6 leftNav d-flex justify-content-start pl-5">
+          <ul>
+            <li>
+              <a href="#"><span class="material-symbols-outlined">more_vert</span></a>
+            </li>
+            <li><a class="menuTrigger" href="#">MENU</a></li>
+          </ul>
+        </div>
+        <div class="col-6 rightNav d-flex justify-content-end">
           <ul>
             <li>
               <a data-target="#loginModal" data-toggle="modal" href="#"
@@ -58,54 +66,46 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 rightNav d-flex justify-content-end">
-          <ul>
-            <li>
-              <a href="#"
-                ><span class="material-symbols-outlined">more_vert</span></a
-              >
-            </li>
-            <li><a class="menuTrigger" href="#">MENU</a></li>
-          </ul>
-        </div>
-        <!-- Fix This Main Menu (links & Showing) -->
+        <!-- MainMenu -->
         <div
-          class="w-100 bg-danger px-3 mx-3 rounded d-none bg-light position-sticky mt-3"
+          class="w-100 px-3 mx-3 mt-3 sticky-top"
           id="mainMenu"
         >
           <div class="row">
-            <ul class="col-4">
-              <li><a href="">ssad</a></li>
-              <li><a href="">diewi</a></li>
-              <li><a href="">qwdd</a></li>
-              <li><a href="">dqwwd</a></li>
-              <li><a href="">tjty</a></li>
-              <li><a href="">edfvb</a></li>
-              <li><a href="">wewerghy</a></li>
-              <li><a href="">edfvb</a></li>
-              <li><a href="">wewerghy</a></li>
+            <ul class="col-2">
+              <li>Sports</li>
+              <li><a href=""><i class="fa-solid fa-futbol"></i>  Soccer</a></li>
+              <li><a href=""><i class="fa-solid fa-basketball"></i>  Basketball</a></li>
+              <li><a href=""><i class="fa-solid fa-volleyball"></i>  Volleyball</a></li>
+              <li><a href=""><i class="fa-solid fa-hockey-puck"></i>  Hockey</a></li>
+              <li><a href=""><i class="fa-solid fa-person-running"></i>  Running</a></li>
+              <li><a href=""><i class="fa-solid fa-person-walking"></i>  Walking</a></li>
+              <li><a href=""><i class="fa-solid fa-dumbbell"></i>  Body Building</a></li>
+              <li><a href=""><i class="fa-solid fa-bicycle"></i>  Cycling</a></li>
+              <li class="pt-3"><a href="">More ...</a></li>
             </ul>
-            <ul class="col-4">
-              <li><a href="">ued</a></li>
-              <li><a href="">kkoious</a></li>
-              <li><a href="">ijouiae</a></li>
-              <li><a href="">iuiad</a></li>
-              <li><a href="">koiuia</a></li>
-              <li><a href="">oiuie</a></li>
-              <li><a href="">kuyu</a></li>
-              <li><a href="">koiuia</a></li>
-              <li><a href="">oiuie</a></li>
-              <li><a href="">kuyu</a></li>
+            <div class="col-4 SportPicMainMenu mt-3">
+                <img src="pics/30023-9-handball-transparent-image.png" alt="">
+            </div>
+
+            <ul class="col-4 offset-1">
+              <li>Categories</li>
+              <li><a href=""><i class="fa-regular fa-heart"></i>  Favorite Sport</a></li>
+              <li><a href=""><i class="fa-solid fa-tv"></i>  Tv Shows</a></li>
+              <li><a href=""><i class="fa-solid fa-helicopter"></i>  Challenges</a></li>
+              <li><a href=""><i class="fa-solid fa-person-snowboarding"></i>  Top Athletes</a></li>
+              <li><a href=""><i class="fa-solid fa-earth-americas"></i>  Best Countries</a></li>
+              <li><a href=""><i class="fa-regular fa-handshake"></i>  PartnerShip</a></li>
+              <li><a href=""><i class="fa-solid fa-question"></i>  FAQ</a></li>
+              <li><a href=""><i class="fa-regular fa-star"></i>  Top Sports</a></li>
+              <li><a href=""><i class="fa-regular fa-circle-question"></i>  Ask Questions</a></li>
+              <li><a href=""><i class="fa-brands fa-shopify"></i>  Shopping</a></li>
+              <li><a href=""><i class="fa-regular fa-newspaper"></i>  Sport Arcticles</a></li>
+              <li><a href=""><i class="fa-solid fa-lock"></i>  Privacy</a></li>
+              <li><a href=""><i class="fa-solid fa-phone"></i>  Contact Us</a></li>
+              <li><a href=""><i class="fa-regular fa-address-card"></i>  About</a></li>
             </ul>
-            <ul class="col-4">
-              <li><a href="">klau</a></li>
-              <li><a href="">loji</a></li>
-              <li><a href="">fdsf</a></li>
-              <li><a href="">qwdqwdqfqfq</a></li>
-              <li><a href="">oiuwq</a></li>
-              <li><a href="">;poi</a></li>
-              <li><a href="">oiiq</a></li>
-            </ul>
+            
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@
               <span> for Athletes </span>
             </div>
             <div
-              class="headerBtn mt-2"
+              class="headerBtn mt-4"
               data-aos="zoom-in-top"
               data-aos-duration="1200"
               data-aos-delay="800"
@@ -230,17 +230,15 @@
     <!-- counter -->
     <section class="counterWrapper">
       <div class="introduce pt-4">Powered By AC Company</div>
-      <div class="joining" data-aos="fade-left" data-aos-duration="400">
+      <div class="joining">
         Join our happy community
       </div>
-      <div class="joining" data-aos="fade-left" data-aos-duration="400">
+      <div class="joining">
         of athletes.
       </div>
       <div>
         <button
           class="becomePartOfIt btn mt-2"
-          data-aos="fade-right"
-          data-aos-duration="500"
         >
           Become Part Of It
         </button>
@@ -289,16 +287,36 @@
         />
       </div>
 
-      <div class="counterSubtitleAnime">
+      <div class="counterSubtitleAnime mt-5">
         <div>
-          <div>PERFORM SMARTER</div>
+          <div> PERFORM SMARTER </div>
           <div>
             <img
               src="pics/221599408_890283371525973_8271737192027984545_n2.jpg"
               alt=""
             />
           </div>
-          <div>IGNITE YOUR ATHLETIC INTELLIGENTE</div>
+          <div> IGNITE YOUR ATHLETIC INTELLIGENTE </div>
+        </div>
+        <div>
+          <div>&nbspPERFORM SMARTER </div>
+          <div>
+            <img
+              src="pics/221599408_890283371525973_8271737192027984545_n2.jpg"
+              alt=""
+            />
+          </div>
+          <div> IGNITE YOUR ATHLETIC INTELLIGENTE </div>
+        </div>
+        <div>
+          <div>&nbspPERFORM SMARTER </div>
+          <div>
+            <img
+              src="pics/221599408_890283371525973_8271737192027984545_n2.jpg"
+              alt=""
+            />
+          </div>
+          <div> IGNITE YOUR ATHLETIC INTELLIGENTE </div>
         </div>
       </div>
     </section>
@@ -428,14 +446,14 @@
     <section class="mainWrapper container-fluid">
       <div class="row SectionDivider10"></div>
       <div class="row">
-        <div class="col-6 leftSide ml-3" data-aos="fade-up" data-aos-duration="600">
+        <div class="col-6 leftSide ml-3" data-aos="fade-up" data-aos-duration="300">
           <p>
             Tailored Services <br />
             for Athletes of <br />
             Every Level
           </p>
         </div>
-        <div class="col-4 rightSide" data-aos="fade-left" data-aos-duration="600">
+        <div class="col-4 rightSide" data-aos="fade-left" data-aos-duration="300">
           <div class="row">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
@@ -450,7 +468,7 @@
       </div>
       <section class="row fullWidthPics">
         <div class="GalleryDiv1">
-          <img src="pics/circle6.png" alt="#" />
+          <img src="pics/877506.jpg" alt="#" />
           <div id="GalleryOverlayID1" class="GalleryOverlayActive"></div>
           <span id="GalleryOverlayTextID1" class="GalleryOverlayActiveText">
             ATHLETES <br />
@@ -458,7 +476,7 @@
           </span>
         </div>
         <div class="GalleryDiv2">
-          <img src="pics/circle4.jpg" alt="#" />
+          <img src="pics/691167.jpg" alt="#" />
           <div id="GalleryOverlayID2" class="GalleryOverlay"></div>
           <div id="GalleryOverlayTextID2" class="GalleryOverlayText">
             COACHING <br />
@@ -466,7 +484,7 @@
           </div>
         </div>
         <div class="GalleryDiv3">
-          <img src="pics/circle7.jpg" alt="#" />
+          <img src="pics/877573.jpg" alt="#" />
           <div id="GalleryOverlayID3" class="GalleryOverlay"></div>
           <div id="GalleryOverlayTextID3" class="GalleryOverlayText">
             FAN <br />
@@ -479,8 +497,8 @@
     <div style="height: 55vh"></div>
     <section class="QAWrapper">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-2 sportIcons text-center" data-aos="fade-right" data-aos-duration="600">
+        <div class="row" data-aos="fade-out" data-aos-duration="600" data-aos-delay="200">
+          <div class="col-2 sportIcons text-center">
             <a href="#"
               ><span class="material-symbols-outlined">sports_soccer</span></a
             >
@@ -493,14 +511,14 @@
           </div>
           <div class="col-1"></div>
           <div class="QAHeader col-6 text-center">
-            <h1 data-aos="zoom-out" data-aos-duration="600">Have Questions?</h1>
-            <h2 data-aos="zoom-out" data-aos-duration="600">We're Here.</h2>
-            <div data-aos="flip-down" data-aos-duration="600">
+            <h1>Have Questions?</h1>
+            <h2>We're Here.</h2>
+            <div>
               <button>Get in Touch</button>
             </div>
           </div>
           <div class="col-1"></div>
-          <div class="col-2 socialIcons text-center" data-aos="fade-left" data-aos-duration="600">
+          <div class="col-2 socialIcons text-center">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></a>

@@ -1,8 +1,13 @@
 $(document).ready(function () {
   // Menu
-  $(".menuTrigger").click(function () {
-    $("#mainMenu").toggleClass("d-block");
+  $("#mainMenu").fadeOut();
+  $(".menuTrigger").hover(function () {
+    $("#mainMenu").fadeIn("fast");
   });
+  $("#mainMenu").mouseleave(function () {
+    $("#mainMenu").fadeOut("fast");
+  });
+
   // AOS PlugIn
   AOS.init({
     duration: 1200,

@@ -14,15 +14,6 @@ $mainColorLighter:#f63e44;
   font-family: CR;
   src: url(../fonts/Cravet/KRAVET_.TTF);
 }
-// Fixes
-// Comma for counter numbers
-// make that anim subtitle after counter
-// make one Card from flipCards Active aotomaticly
-// fix the space between left header and counter
-// fix menu problem
-// fix responsibility (being responsive) problem
-// fix three dots BG in menu
-// take copyRight text in flipCards section to bottom center
 html{
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
@@ -39,8 +30,11 @@ li {
   list-style: none;
 }
 a {
-  text-decoration: none;
+  text-decoration: none!important;
   color: $darkText;
+}
+.d-block{
+  transition: display .4s;
 }
 .mt-80{
   margin-top: 80px;
@@ -62,7 +56,8 @@ a {
 }
 .GalleryOverlay{
   z-index: 99;
-  background-color: $mainColorLighter;
+  background-color: rgb(255, 255, 255);
+   border: 1px solid black;
   width: 102.8%;
   height: 100vh;
   border-radius: 50%;
@@ -112,22 +107,22 @@ a {
 #GalleryOverlayTextID3 {
   transition: all .4s;
 }
-// mixins
 
 // Navbar
 .navbarWrapper {
   height: 50px;
   .row {
-    .leftNav {
+    .rightNav {
       ul {
         li {
           display: inline;
           &:first-child {
             background-color: transparent;
-            padding: 5px 35px 5px 13px;
+            padding: 5px 88px 5px 13px;
             border-radius: $radius10 + 10;
             border: 1px solid black;
-            a {
+            background-color: #ffffff;
+            a{
               color: $darkText;
               font-size: 14px;
               font-weight: 600;
@@ -138,8 +133,9 @@ a {
             padding: 5px 18px;
             border-radius: $radius10 + 10;
             position: absolute;
-            left: 110px;
+            right: 11px;
             top: -6px;
+            
             a {
               color: rgb(255, 255, 255);
               font-size: 14px;
@@ -149,23 +145,24 @@ a {
         }
       }
     }
-    .rightNav {
+    .leftNav {
       ul {
         li {
           display: inline;
           &:first-child {
             background-color: rgb(255, 255, 255);
-            padding: 5px 28px 5px 10px;
+            padding: 5px 30px 5px 6px;
             border-radius: $radius10 + 10;
             position: absolute;
-            right: 62px;
-            top: -6px;
+            left: 18px;
+            top: -6.5px;
             border: 1px solid black;
             z-index: -2;
             a {
               color: black;
               font-size: 14px;
               font-weight: 600;
+              z-index: 999;
               span {
                 vertical-align: -7px;
               }
@@ -173,7 +170,8 @@ a {
           }
           &:nth-child(2) {
             background-color: black;
-            padding: 9px 18px;
+            padding: 9px 24px;
+            margin-left: -4px;
             border-radius: $radius10 + 10;
             z-index: 2;
             a {
@@ -187,11 +185,49 @@ a {
     }
     #mainMenu {
       z-index: 999;
-      // transition: display .4s linear;
+      background-color: $mainColor;
+      height: 82vh;
+      // border: 1px solid black;
+      border-radius: $radius10;
+      .row{
+        position: relative;
+        .SportPicMainMenu{
+            img{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+        ul{
+          li{
+            padding: 0 0 4px 12px;
+            transition: transform .3s;
+            &:first-child{
+              font-size: $fontSize38 - 4px;
+              color: rgb(255, 255, 255)!important;
+              padding-bottom: 32px;
+              font-family: CR;
+            }
+            &:hover:not(:first-child){
+                transform: translateX(4px);
+              }
+            a{
+              color: rgb(255, 255, 255);
+              
+            }
+          }
+          }
+          
+        }
+      }
     }
   }
-}
 // modal style
+.modal{
+  padding-right: 0!important;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -529,6 +565,7 @@ a {
             font-family: QS;
             font-weight: 600;
             border-radius: 14px 4px 14px 4px;
+            transition: color .3s,background-color .3s;
             &:hover{
               background-color: $mainColor;
               color: white!important;
@@ -558,6 +595,7 @@ a {
     border-radius: $radius10 + 14px;
     padding: 8px 16px;
     z-index: 4;
+    transition:all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     &:hover{
       background-color: white;
       color: black;
@@ -604,8 +642,10 @@ a {
     font-family: CR;
   }
   .counterSubtitleAnime{
+     overflow-x:hidden;
     div{
-      // animation: subtitle 10s infinite linear;
+        animation: subtitle 14s infinite linear;
+      
       div{
         font-size: $fontSize38 + 28px;
         white-space: nowrap;
@@ -638,6 +678,10 @@ a {
     }
     .arrows{
       a{
+        transition: color .3s;
+        &:hover{
+          color: $mainColor;
+        }
         span{
         border: 1px solid black;
         border-radius: 50%;
@@ -792,32 +836,6 @@ a {
         bottom: 0;
         
       }
-      // .textOnOverlay{
-      //   z-index: 99;
-      //   background-color: rgb(245, 21, 21,.7);
-      //   width: 90%;
-      //   height: 20%;
-      //   transform: rotate(90deg);
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   transform: translate(-50%,-50%);
-      //   border-radius: $radius10 + 20px;
-      //   font-size: $fontSize38 + 6px;
-      //   color: white;
-      // }
-      // .overlayCus{
-      //     width: 100%;
-      //     height: 100vh;
-      //     background-color: $mainColorLighter;
-      //     border-radius: 50%;
-      //     position: absolute;
-      //     right: 0;
-      //     left: 0;
-      //     top: 0;
-      //     bottom: 0;
-      //     cursor: pointer;
-      // }
     }
   }
 }
@@ -933,7 +951,7 @@ a {
           }
         }
         div{
-      height: 44vh;
+      height: 40vh;
       border-radius: $radius10 + 4px;
       a{
         font-size: $fontSize14 - 4px;
@@ -956,8 +974,6 @@ a {
     }
   }
 }
-
-
 // animations
 @keyframes pulse {
   from {
@@ -970,7 +986,7 @@ a {
     opacity: 0;
   }
 }
-// @keyframes subtitle {
-//   from{transform: translate(0);}
-//   to{transform: translate(100px);}
-// }
+@keyframes subtitle {
+  from{transform: translate(0);}
+  to{transform: translate(-958px);}
+}
